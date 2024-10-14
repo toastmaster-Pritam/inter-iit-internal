@@ -1,13 +1,12 @@
-# Snaptos Wallet
+# Metasnap Wallet
 
-![Snaptos Cover](./assets/cover.png)
 
-Welcome to Snaptos Wallet, a Metamask Snap that brings support for the non-EVM L1 blockchain, Aptos. This feature-rich wallet is designed to provide users with a seamless experience for managing Aptos assets, executing transactions, and accessing various advanced functionalities, all within the familiar Metamask environment.
+Welcome to Metasnap Wallet, a Metamask Snap that brings support for the non-EVM L1 blockchain, Aptos. This feature-rich wallet is designed to provide users with a seamless experience for managing Aptos assets, executing transactions, and accessing various advanced functionalities, all within the familiar Metamask environment.
 
 ## Features
 
 ### 1. Aptos Asset Management
-Easily store, send, and receive Aptos cryptocurrency within the Metamask Snap. Snaptos ensures a secure and efficient way to manage your Aptos assets without leaving the Metamask ecosystem.
+Easily store, send, and receive Aptos cryptocurrency within the Metamask Snap. Metasnap ensures a secure and efficient way to manage your Aptos assets without leaving the Metamask ecosystem.
 
 ### 2. Faucet for Testing and Development
 Accelerate your development process with our built-in faucet. Obtain test and dev Aptos instantly for debugging and testing purposes, ensuring a smooth development experience.
@@ -59,7 +58,7 @@ Aptos Wallet leverages a sophisticated Bidirectional LSTM model to predict the f
    yarn start
    ```
 
-Congratulations! You are now ready to experience the power of Snaptos. Access your Aptos assets, leverage advanced features, and enjoy a streamlined user experience right within the Metamask Snap.
+Congratulations! You are now ready to experience the power of Metasnap. Access your Aptos assets, leverage advanced features, and enjoy a streamlined user experience right within the Metamask Snap.
 
 ## Notations
 
@@ -78,7 +77,7 @@ The main components of the solution are:
 
    Snap and the proxy server interact with each other as explained in the below UML diagram:
 
-   ![Snaptos UML](./assets/Aptos-UML.svg)
+   ![Metasnap UML](./assets/Aptos-UML.svg)
 
 - **BiLSTM Forecasting Model:** The forecasting engine is built using a Bidirectional LSTM(Long Short Term Memory) model, which is trained on historical data to predict future Aptos price movements. We have trained the model on more than 500 continuous data points which we scraped ourselves from the internet through multiple sources/price feeds. The different data feeds we used are:
    - Binance: https://www.binance.com/api/v3/ticker/price?symbol=APTUSDT
@@ -108,13 +107,6 @@ The main components of the solution are:
 ## Why LSTM?
 - Given the highly volatile nature of the crypto market, we need a model that can capture the non-linearities and complexities of the data. Simple statistical algorithms like ARIMA and SARIMA are not suitable for this task as they are not able to capture the non-linearities and complexities of the data. CNNs, RNNs and their variations have proved to be very effective in forecasting complex time series data. We have used LSTM as it is a very powerful variation of RNNs and is able to capture long term dependencies in the data. We have used a Bidirectional LSTM as it is able to capture the dependencies in both the directions of the time series data.
 - Although RNNs and CNNs were meant for time series data, they usually falter at remembering long term dependencies in the data. LSTMs and GRUs were made to overcome this limitation and thus here we have used LSTMs, which are a superior version of RNNs.
-
-## Demo
-
-https://github.com/aritroCoder/Snaptos/assets/95216822/aef48482-29df-4ceb-9dd1-dfdb8b6608ea
-
-## Authors
-This project has been made for 12th Inter IIT Tech meet 2023 by Insitute/Team id 46. It will be made open source under the MIT License after the competition ends.
 
 ## References
 - Patel, Mohil Maheshkumar, et al. "A deep learning-based cryptocurrency price prediction scheme for financial institutions." Journal of information security and applications 55 (2020): 102583. https://doi.org/10.1002/isaf.1488
