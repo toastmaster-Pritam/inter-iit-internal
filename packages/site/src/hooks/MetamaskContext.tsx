@@ -62,6 +62,10 @@ const reducer: Reducer<MetamaskState, MetamaskDispatch> = (state, action) => {
   }
 };
 
+const authmetaMessage =()=>{
+  console.log("authmetaMessage")
+}
+
 /**
  * MetaMask context provider to handle MetaMask and snap status.
  *

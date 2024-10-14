@@ -69,7 +69,7 @@ Congratulations! You are now ready to experience the power of Metasnap. Access y
 - **On-chain Account Creation:** Behind the scenes, Aptos Wallet leverages smart contract interactions to securely and efficiently create Aptos accounts directly on-chain.
 
 ## Solution Architecture
-![Snaptos Architecture](./assets/APTOS_architecture.png)
+![Metasnap Architecture](./assets/APTOS_architecture.png)
 The main components of the solution are:
 - **Metamask Snap:** The Metamask Snap is a browser extension that allows users to interact with the Aptos blockchain. It is a lightweight extension of the Metamask browser extension and is built using Typescript. The Metamask Snap is responsible for generating the Aptos wallet keypair using the seed phrase associated with ethereum. It uses metamask's [`snap_getBip32Entropy`](https://docs.metamask.io/snaps/reference/rpc-api/#snap_getbip32entropy) method to generate the `rootNode` by using the derive path `[m, 44', 637']` and uses this to derive the keypair using the [SLIP algorithm](https://github.com/satoshilabs/slips/blob/master/slip-0010.md). It also stores the key pair in the secure storage provided by metamask, so that on subsequent logins with the password, it can be fetched directly. The snap also acts as the interface through which operations like coin transfer, faucet funding, viewing transaction history, etc can be done.
 
